@@ -4763,6 +4763,7 @@ function calculatePitch() {
             let loopsThresh = 1
 
             //        if(totalAMPmodified<.5-.01)
+            if(isFinite(tAScaled)&&tAScaled>0.)
             for (n = 0; n < 444; n += 1.)
 
 
@@ -4824,7 +4825,7 @@ function calculatePitch() {
          var metas = 0.
             tolerance = (tolerance + plusOrMinusPowerSeriesBUFFER) ** (.75 + (totalAMPmodified + tAScaledPermanent + tolerance - plusOrMinusPowerSeriesNorm));
                 var tolStuck = (tolerance);
-
+if(isFinite(tolStuck)&&isFinite(taTRUNC))
 for(var metaloops = 0.;metaloops<2.+totalAMPmodified+totalAMPtrunc+taTRUNC+tolStuck;metaloops+=(tolStuck/trunc)*trunc)if(metas<20)
 {
     metas++
